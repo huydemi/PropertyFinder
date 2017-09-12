@@ -33,6 +33,8 @@ export default class SearchPage extends Component {
 				  />
 				</View>
 
+        <Image source={require('./Resources/house.png')} style={styles.image}/>
+
       </View>
     );
   }
@@ -66,4 +68,8 @@ const styles = StyleSheet.create({
 	  borderRadius: 8,
 	  color: '#48BBEC',
 	},
+  image: {
+    width: 217,
+    height: 138,
+  },
 });
