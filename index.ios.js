@@ -11,12 +11,26 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  NavigatorIOS,
 } from 'react-native';
 
-export default class PropertyFinder extends Component {
+class SearchPage extends Component {
   render() {
     return <Text style={styles.description}>Search for houses to buy!</Text>;
+  }
+}
+
+class PropertyFinder extends Component {
+  render() {
+    return (
+      <NavigatorIOS
+        style={styles.container}
+        initialRoute={{
+          title: 'Property Finder',
+          component: SearchPage,
+        }}/>
+    );
   }
 }
 
@@ -26,6 +40,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#656565',
     marginTop: 65,
+  },
+  container: {
+    flex: 1,
   },
 });
 
