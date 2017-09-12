@@ -16,7 +16,7 @@ import {
 
 export default class PropertyFinder extends Component {
   render() {
-    return React.createElement(Text, {style: styles.description}, "Search for houses to buy!");
+    return <Text style={styles.description}>Search for houses to buy!</Text>;
   }
 }
 
